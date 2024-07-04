@@ -16,6 +16,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    avatar:{
+        type: String,
+        default: "https://miro.medium.com/v2/resize:fit:720/format:webp/0*Ggt-XwliwAO6QURi.jpg"
+    }
 }, { timestamps: true });
 
 const User = mongoose.model('User', userSchema);
