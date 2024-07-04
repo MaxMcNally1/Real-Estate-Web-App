@@ -12,8 +12,9 @@ export default function SignUp() {
       })
   }
   const handleSubmit = async (e) => {
+    e.preventDefault(); // ---------------- moved from below try 
     try {
-      e.preventDefault();
+      
     setLoading(true);
     const res = await fetch('api/auth/signup', 
       {
@@ -34,7 +35,7 @@ export default function SignUp() {
       navigate('/sign-in');
     } catch (error) {
       setLoading(false);
-      setError(data.message);
+      setError(error.message);  // ---- changed from data.message 
     }
   } 
   return (
@@ -51,13 +52,13 @@ export default function SignUp() {
         text-white p-3 rounded-lg uppercase hover:opacity-95 
         disabled:opacity-80'>{loading ? 'Loading...' : 'Sign Up'}</button>
       </form>
-      <div className="">
+      <div className='flex gap-2 mt-5'>
         <p>Have an account?</p>
         <Link to={"/sign-in"}>
           <span className='text-blue-700'>Sign In</span>
         </Link>
       </div>
-      {error && <p className='text-red-500'>{error}</p>}
+      {error && <p className='text-red-500 mt-5'>{error}</p>}
     </div>
   )
 }
