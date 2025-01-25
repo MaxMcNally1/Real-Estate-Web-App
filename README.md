@@ -23,6 +23,10 @@ A full-stack real estate marketplace built with MongoDB, Express.js, React, and 
 - Tailwind CSS
 - Firebase Storage
 
+## Deployment
+
+The application is deployed using Render. Access the live demo at https://mern-estate-4nem.onrender.com
+
 ## Setup
 
 ### Prerequisites
@@ -46,14 +50,15 @@ npm install
 
 ### Environment Variables
 
+```bash
 # Create variable files and add variables
 `client/.env`:
-```
+
 VITE_FIREBASE_API_KEY=your-firebase-api-key
-```
+
 
 `api/.env`:
-```
+
 MONGO=your-mongodb-connection-string
 JWT_SECRET=your-jwt-secret
 ```
@@ -67,14 +72,10 @@ npm start
 npm run dev
 ```
 
-# View locally hosted site 
+### View locally hosted site 
+```bash
 http://localhost:5173
-
-
-## Deployment
-
-The application is deployed using Render. Access the live demo at https://mern-estate-4nem.onrender.com
-
+```
 
 ## License
 MIT
