@@ -81,6 +81,8 @@ http://localhost:5173
 MIT
 
 
-## Database
+## Troubleshooting 
 MongoDB might pause the clusters assiociated with this app if not in regular use.
 Email Max McNally to have the clusters reset. 
+
+Enable pop ups to use Google OAuth
