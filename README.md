@@ -80,3 +80,7 @@ http://localhost:5173
 ## License
 MIT
 
+
+## Database
+MongoDB might pause the clusters assiociated with this app if not in regular use.
+Email Max McNally to have the clusters reset. 
